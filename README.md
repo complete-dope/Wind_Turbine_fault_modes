@@ -5,3 +5,6 @@ We conducted an analysis on data obtained from the Supervisory Control and Data 
 During the faulty times, the wind turbine components exhibited anomalous behavior. For instance, during GF, the temperatures of all wind turbine components were lower than normal, while during AF and EF, the temperatures were higher. Also, reactive power was anomalously high during EF, while power was lower during MF. Thus, we were able to classify fault modes based on various SCADA measured components.
 
 To classify the fault modes, we developed an Adaptive Boosting (AdaBoost) based predictive model. However, the data was largely imbalanced among fault modes, so we implemented SMOTE within a 5-fold CV pipeline. With this approach, we obtained a macro F1 score of 64-65%, with two problematic classes, EF and FF, being falsely predicted. To improve the model performance, we performed hyperparameter tuning on four AdaBoost hyperparameters. After tuning, the macro F1 score improved to 69-70%, and the number of false predictions for EF classes successfully reduced.
+
+
+## The F1 score is 70% 
